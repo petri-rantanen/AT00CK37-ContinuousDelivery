@@ -105,11 +105,13 @@ Note that the command must be executed by a user that has access to docker comma
 
 Create file called "Dockerfile" in the application root directory with content:
 
+```
 FROM quay.io/quarkus/quarkus-distroless-image:2.0
 WORKDIR /app
 COPY target/*-runner /app/app
 CMD ["/app/app"]
 EXPOSE 8080
+```
 
 What do you think these configuration options might do?
 
